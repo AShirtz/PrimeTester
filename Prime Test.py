@@ -53,6 +53,8 @@ def primeTest (n, primeList):
 #Primality test taken from same text as above, p.155
 #True = 'prime', False = 'composite'
 def primeTestFinal (n, pL = sieve(5000)):
+    if n in pL:
+        return True
     for x in pL:
         if n % x == 0:
             return False
